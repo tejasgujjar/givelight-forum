@@ -1,0 +1,39 @@
+.body, .custom-body{
+  background-image: url('http://cache23.fansshare.com/photos/hdwallpaper/plain-backgrounds-light-green-website-background-hd-wallpaper-plain-888779177.jpg') !important;
+}
+.header-text{
+  color: red;
+}
+
+/*.login-buttons-dropdown-align-{
+  background-color: cadetblue;
+   width: -webkit-fill-available;
+   height: 3em;
+
+}*/
+.login-link-text{
+  color: white;
+}
+.page{
+  background-image: url('../children_bg1.jpg');
+  width: 70%;
+  margin: auto;
+  height: 50%;
+}
+.md-primary{
+  background-color: #408289 !important;
+}
+.create-thread-tools{
+  display: flex;
+}
+.msg{
+  font-weight: 600;
+}
+.volunteer-card:hover{
+  background-color: rgba(128, 128, 128, 0.27);
+  cursor: pointer;
+}
+.thread-head-text{
+  margin-left: 2%;
+  
+}

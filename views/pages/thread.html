@@ -1,0 +1,54 @@
+<md-card class="page">
+  <md-toolbar class="md-primary search-toolbar-header">
+    <div class="md-toolbar-tools">{{ thread.content }}</div>
+    <div class="md-toolbar-tools">by {{ thread.author }} at {{ thread.createdAt | date }}</div>
+  </md-toolbar>
+    <!-- <p>{{ thread.content }}</p> -->
+    <!-- <p>by {{ thread.author }} at {{ thread.createdAt | date }}</p> -->
+    <md-card ng-repeat="post in posts" class="volunteer-card">
+      <span>
+          <md-card-title>
+            <md-card-title-text>
+              <span>
+                <p class="msg" ng-bind="post.content"></p>
+                by {{ post.author }} at {{ post.createdAt | date }}
+              </span>
+            </md-card-title-text>
+          </md-card-title>
+      </span>
+    </md-card>
+    <!-- <ul>
+        <li ng-repeat="post in posts">
+            <p ng-bind="post.content"></p>
+            by {{ post.author }} at {{ post.createdAt | date }}
+        </li>
+    </ul> -->
+
+    <!-- <h2>Reply</h2> -->
+    <!-- <form ng-submit="createPost(post)">
+        <input type="text" placeholder="Write your reply..." ng-model="post.content">
+        <button type="submit">Post</button>
+    </form> -->
+    <md-card>
+      <md-toolbar class="md-primary search-toolbar-header">
+        <div class="md-toolbar-tools">Reply</div>
+      </md-toolbar>
+    <form ng-submit="createPost(post)"  class="create-thread-tools">
+        <!-- <input type="text" placeholder="Start discussion..." ng-model="thread.content"> -->
+        <div style="width:80%;">
+          <md-input-container class="md-block" flex-gt-sm>
+            <!-- <label>First name</label> -->
+            <input type="text" placeholder="Write your reply..." ng-model="post.content">
+          </md-input-container>
+        </div>
+        <div class="">
+          <md-button type="submit" class="md-primary md-raised" aria-label="Use Android">
+              Post
+          </md-button>
+        </div>
+        <!-- <button type="submit">Create</button> -->
+
+    </form>
+  </md-card>
+
+</md-card>

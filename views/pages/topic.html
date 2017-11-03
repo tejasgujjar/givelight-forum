@@ -1,0 +1,64 @@
+<md-card class="page">
+    <md-toolbar class="md-primary search-toolbar-header">
+      <div class="md-toolbar-tools">{{ topic.name }}</div>
+    </md-toolbar>
+    <md-content style="height: 600px;" md-theme="altTheme">
+      <!-- <div class="topics_list"> -->
+        <p class="thread-head-text">Threads / Chapters</p>
+        <!-- <ul>
+            <li ng-repeat="thread in threads">
+                <a ui-sref="thread({threadId: thread._id})">{{ thread.content }}</a>
+                by {{ thread.author }} at {{ thread.createdAt | date }}
+            </li>
+        </ul> -->
+        <!-- <md-card class="volunteer-list-div" > -->
+          <md-card ng-repeat="thread in threads" class="volunteer-card">
+            <span>
+                <md-card-title>
+
+                  <md-card-title-text>
+                    <span>
+                      <a ui-sref="thread({threadId: thread._id})">{{ thread.content }}</a>
+                      by {{ thread.author }} at {{ thread.createdAt | date }}
+                    </span>
+                  </md-card-title-text>
+
+                  <!-- <md-card-title-text>
+
+                  </md-card-title-text> -->
+                </md-card-title>
+              <!-- </md-checkbox> -->
+            </span>
+          </md-card>
+        <!-- </md-card> -->
+      <!-- </div> -->
+      <hr>
+
+      <md-card>
+        <h3>Create a new thread</h3>
+        <!-- <md-toolbar class="md-primary search-toolbar-header">
+          <div class="md-toolbar-tools">Create a new thread</div>
+        </md-toolbar> -->
+        <form ng-submit="createThread(thread)"  class="create-thread-tools">
+            <!-- <input type="text" placeholder="Start discussion..." ng-model="thread.content"> -->
+            <div style="width:80%;">
+              <md-input-container class="md-block" flex-gt-sm>
+                <!-- <label>First name</label> -->
+                <input placeholder="Start discussion..." ng-model="thread.content">
+              </md-input-container>
+            </div>
+            <div class="">
+              <md-button type="submit" class="md-primary md-raised" aria-label="Use Android">
+                  Create
+              </md-button>
+            </div>
+            <!-- <button type="submit">Create</button> -->
+
+        </form>
+      </md-card>
+
+      <!-- <h2>Create a new thread</h2> -->
+
+    </md-content>
+
+</md-card>
